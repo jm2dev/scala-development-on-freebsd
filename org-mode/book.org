@@ -181,3 +181,16 @@ main = do
   
 #+END_SRC
 
+* Scala
+
+Everything we need is going to be managed by [[http://scala-sbt.org][sbt]].
+
+Following the installation instructions we end up with a shell script
+to launch the application, which is saved relatively to this script.
+
+#+NAME: bin/sbt
+#+BEGIN_SRC sh
+#!/bin/sh
+
+java -Xmx1024M -jar `dirname $0`/sbt-latest/sbt-launch.jar "$@"
+#+END_SRC
