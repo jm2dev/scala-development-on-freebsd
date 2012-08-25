@@ -1,0 +1,7 @@
+* Scala development with FreeBSD
+
+[[http://scala-lang.org][Scala]] is software language for the JVM. [[http://www.freebsd.org][FreeBSD]] is Unix like operating
+system.
+
+This guide tries to help scala users develop software projects on a
+FreeBSD system.
