@@ -1,0 +1,39 @@
+#+TITLE: Devoloping scala applications
+#+AUTHOR: Jose Miguel Martinez Carrasco
+
+* SBT
+
+Everything we need is going to be managed by [[http://scala-sbt.org][sbt]].
+
+Following the installation instructions we end up with a shell script
+to launch the application, which is saved relatively to this script.
+
+Inside $HOME/bin I saved the sbt launcher jar file under a directory
+named with its version, and I created a symbolic link to easily swap
+versions.
+
+#+NAME: bin/sbt
+#+BEGIN_SRC sh
+#!/bin/sh
+
+java -Xmx1024M -jar `dirname $0`/sbt-latest/sbt-launch.jar "$@"
+#+END_SRC
+
+* Giter8
+
+[[https://github.com/n8han/giter8][giter8]] is a nice utility to bootstrap scala projects, creating a
+barebone project to start coding inmediately and saved time setting up
+new projects.
+
+First we will install [[https://github.com/n8han/conscript#readme][Conscript]] and we will use it to install giter8
+for us.
+
+#+NAME: Conscript installation.
+#+BEGIN_SRC sh
+curl https://raw.github.com/n8han/conscript/master/setup.sh | sh
+#+END_SRC
+
+#+NAME: Giter8 installation.
+#+BEGIN_SRC sh
+cs n8han/giter8
+#+END_SRC
